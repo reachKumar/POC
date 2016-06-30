@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="POManagementASPNet.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" type="text/css" href="style1.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="application.css" media="screen"/>
+    <%--<script src="Scripts/Scripts.js" language="javascript" type="text/javascript"></script>--%>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="navbar navbar-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <div class="nav-collapse">
+                    <img src="images/Hibernia_One_Logo.png" alt="logo" />
+                    <div style="float:right; padding: 11px 10px 10px 5px;">
+                        <strong><asp:Label ID="lblUserName" runat="server" ForeColor="White"></asp:Label></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </form>
+    <div class="application-footer-padding">
+    </div>
+    <footer class="application-footer">
+        <div class="container-fluid">
+<div class="row">
+<div class="span8 pull-left">
+<UL class="application-footer-list">
+  <LI>© 2012 <A href="http://www.hiberniaatlantic.com/" target="_blank">Hibernia Networks</A></LI>
+  <%--<LI><A href="http://www.hiberniamedia.com/index.php" target="_blank">Hibernia Media</A></LI>
+  <LI><A href="http://www.hiberniagfn.com/" target="_blank">Hibernia GFN</A></LI>--%></UL></div>
+<div class="pull-right">
+<UL class="application-footer-list">
+  <LI class="footer-label">Support:</LI>
+  <LI><A href="https://owa.hiberniaatlantic.com/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fowa.hiberniaatlantic.com%2fowa%2f" target="_blank">Hibernia Web Mail</A></LI>
+  <LI class="footer-label">Phone:</LI>
+  <LI>+353.1.8673600</LI>
+  <LI class="footer-label">M-F 9AM-7PM (GMT-5:00)</LI></UL></div></div></div>
+    </footer>
+</body>
+</html>
+
+

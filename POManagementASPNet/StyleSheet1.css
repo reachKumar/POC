@@ -1,0 +1,19 @@
+﻿.modalbackground 
+{ 
+position: absolute; 
+z-index: 6000 !important; 
+top: 0px; 
+left: 0px; 
+background-color:White; 
+filter:alpha(opacity=60); 
+-moz-opacity: 0.6; 
+opacity: 0.6; 
+
+}
+
+ 
+.modalpopup
+{
+    background-color:White;
+    padding:6px 6px 6px 6px;
+}

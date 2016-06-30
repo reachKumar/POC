@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="POManagementASPNet.Site" %>
+
+<%@ Register Src="~/Search.ascx" TagName="Search" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <%-- <meta http-equiv="X-UA-Compatible" content="IE= 9" />
+    <meta http-equiv="X-UA-Compatible" content="IE= Edge" />--%>
+    <title></title>
+   <%-- <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />--%>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style1.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="application.css" media="screen" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 10%;
+        }
+        .style3
+        {
+            width: 554px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table>
+        <tr>
+            <td>
+                <div class="navbar navbar-top">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <div class="nav-collapse">
+                                <ul class="nav">
+                                    <li id="liHome" runat="server" style="width: 6%;"><a href="Home.aspx">Home</a></li>
+                                    <li id="liNew" runat="server" style="width: 7%;"><a href="NewPO.aspx">New PO</a></li>
+                                    <li id="liEdit" runat="server" style="width: 7%;"><a href="Editpo.aspx">Edit PO</a></li>
+                                    <li id="liApprove" runat="server" style="width: 9%;"><a href="ApprovePO.aspx">Approve
+                                        PO</a></li>
+                                    <li id="liClose" runat="server" style="width: 8%;"><a href="ClosePO.aspx">Closed PO</a></li>
+                                    <li id="liAdmin" runat="server" style="width: 6%;"><a href="Admin.aspx">Admin</a></li>
+                                    <li id="liReport" runat="server" style="width: 6%;"><a href="report.aspx">Report</a></li>
+                                    <li><a href="POSample/HiberniaPOUserGuide.pdf">PO System-Guide</a></li>
+                                    <%--<li><a href="mailto:itrequest@hiberniaatlantic.com">IT Help Desk</a></li>--%>
+                                </ul>
+                                <div style="float: right; padding: 11px 10px 10px 5px;">
+                                    <strong>
+                                        <asp:Label ID="lblUserName" runat="server" ForeColor="White"></asp:Label></strong><br />
+                                    <a href="Login.aspx" runat="server" style="color: White" id="A1">Sign in as another
+                                        User</a>
+                                </div>
+                                <%-- <div style="float:right; padding: 11px 10px 10px 5px;">
+                                <strong><span id="lblUserName" style="color:White;"></span></strong>
+                                </div>--%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td style="width: 30%;">
+                        </td>
+                        <td align="center">
+                            <img src="images/Hibernia_One_Logo.png" title="Consultant" alt="Po System" />
+                        </td>
+                        <td style="width: 30%; vertical-align: top">
+                            <uc1:Search ID="Search1" runat="server" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <table>
+                    <tr valign="top">
+                        <td style="width: 15%;">
+                        </td>
+                        <td>
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                        <td style="width: 15%;">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <table>
+            <tr>
+                <td>
+                    <div id="results">
+                        <footer class="application-footer">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <DIV class="container-fluid">
+                                        <DIV class="row">
+                                        <DIV class="span8 pull-left">
+                                        <UL class="application-footer-list">
+                                            <li>© 2012 <a href="http://www.hiberniaatlantic.com/" target="_blank">Hibernia Networks</a></li>
+                                            <%--<li><A href="http://www.hiberniamedia.com/index.php" target="_blank">Hibernia Media</A></li>
+                                            <li><A href="http://www.hiberniagfn.com/" target="_blank">Hibernia GFN</A></li></UL></DIV>--%>
+                                    </td>
+                                    <td align="right">
+                                        <DIV class="pull-right">
+                                        <UL class="application-footer-list">
+                                            <LI class="footer-label">Support:</LI>
+                                            <LI><a href="mailto:itrequest@hiberniaatlantic.com" target="_blank">IT Support</a></LI>
+                                            <LI class="footer-label">Phone:</LI>
+                                            <LI>+353 1 8673636</LI>
+                                            <LI class="footer-label">      
+                                                    + 1 908 516 4225
+                                            </LI></UL></DIV>
+                                    </td>
+                                </tr>
+                            </table> 
+                        </footer>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </table>
+    </form>
+</body>
+</html>
